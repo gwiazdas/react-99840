@@ -5,9 +5,6 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 const Search = (props) => {
   const [whatUserWant, setWhatUserWant] = useState("");
 
-  // const serchForFilms = () => {
-  //   props.onSearch(whatUserWant);
-  // };
 
   const userTyped = (event) => {
     props.onSearch(event.target.value);
@@ -16,14 +13,10 @@ const Search = (props) => {
   return (
     <InputGroup className="mb-3">
       <FormControl
-        placeholder="proszę wpisać tytuł filmu lub nazwisko reżysera"
+        placeholder="proszę wpisać szukany komputer"
         onChange={userTyped}
       />
-      {/*<InputGroup.Append>*/}
-      {/*  <Button variant="info" onClick={serchForFilms}>*/}
-      {/*    Szukaj filmów*/}
-      {/*  </Button>*/}
-      {/*</InputGroup.Append>*/}
+
     </InputGroup>
   );
 };
